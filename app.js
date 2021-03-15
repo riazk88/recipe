@@ -13,7 +13,7 @@ searchForm.addEventListener('submit', (e)=> {
 });
 
 async function fetchAPI(){
-    const baseURL=`https://api.edamam.com/search?q=pizza&app_id=${APP_ID}&app_key=${APP_key}`;
+    const baseURL=`https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=pizza&app_id=${APP_ID}&app_key=${APP_key}`;
     const response=await fetch(baseURL);
     const data=await response.json();
     console.log(data);
